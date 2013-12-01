@@ -1,0 +1,10 @@
+#!/usr/local/bin/zsh
+
+for x in `ls -1 | ack --nocolor '^ex' | ack --nocolor -v '\.'`; do
+  echo ""
+  echo "Running $x"
+  echo "=========="
+  ./$x
+done
+
+echo ""

@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+rerun -p '{Makefile,**/*.{c,h}}' -c -x -- 'make clean; make; ./runall'
