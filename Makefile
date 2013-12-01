@@ -6,6 +6,7 @@ all: ex1 \
 	ex5 \
 	ex6 \
 	ex7 \
+	ex8 \
 
 clean:
 	rm -f ex1 \
@@ -14,4 +15,5 @@ clean:
 		ex5 \
 		ex6 \
 		ex7 \
+		ex8 \
 
