@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+last=`ls -1 | grep -P '^ex' | grep -Pv '\.' | sort | tail -n 1`
+
+echo ""
+echo "Running $last"
+echo "=========="
+./$last
+
+echo ""
