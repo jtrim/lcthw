@@ -1,12 +1,28 @@
 #include <stdio.h>
 
 int main(int argc, char *argv[]) {
-  // c
-  int ages[] = { 23, 43, 12, 89, 2 };
-  char *names[] = {
-    "Alan", "Frank",
-    "Mary", "John", "Lisa"
-  };
+
+  // original definition: int ages[] = { 23, 43, 12, 89, 2 };
+  int ages[5];
+  *(ages) = 12;
+  *(ages + 1) = 43;
+  *(ages + 2) = 12;
+  *(ages + 3) = 89;
+  *(ages + 4) = 2;
+
+
+  /* original definition:
+   * char *names[] = {
+   *   "Alan", "Frank",
+   *   "Mary", "John", "Lisa"
+   * };
+   */
+  char *names[5];
+  *(names) = "Alan";
+  *(names + 1) = "Frank";
+  *(names + 2) = "Mary";
+  *(names + 3) = "John";
+  *(names + 4) = "Lisa";
 
   // c
   int count = sizeof(ages) / sizeof(int);
