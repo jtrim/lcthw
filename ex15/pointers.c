@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
   printf("fiz is %i\n", *fiz);
   printf("Address is %u\n", &(*fiz));
 
-  char *other_fiz = fiz;
+  int *other_fiz = fiz;
 
   printf("Address of other_fiz is %u\n", &(*other_fiz));
 
