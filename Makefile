@@ -16,6 +16,9 @@ all: ex1/ex1 \
 	ex14/ex14 \
 	ex15/ex15 \
 	ex15/pointers \
+	ex16/ex16 \
+	ex16/ex16-2
+	ctags -R
 
 clean:
 	rm -f ex1/ex1 \
@@ -34,3 +37,5 @@ clean:
 		ex14/ex14 \
 		ex15/ex15 \
 		ex15/pointers \
+		ex16/ex16 \
+		ex16/ex16-2 \
