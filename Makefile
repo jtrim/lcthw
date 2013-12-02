@@ -13,6 +13,7 @@ all: ex1/ex1 \
 	ex12/ex12 \
 	ex13/ex13 \
 	ex13/ex13-2 \
+	ex14/ex14 \
 
 clean:
 	rm -f ex1/ex1 \
@@ -28,3 +29,4 @@ clean:
 		ex12/ex12 \
 		ex13/ex13 \
 		ex13/ex13-2 \
+		ex14/ex14 \
