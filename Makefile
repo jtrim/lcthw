@@ -14,6 +14,8 @@ all: ex1/ex1 \
 	ex13/ex13 \
 	ex13/ex13-2 \
 	ex14/ex14 \
+	ex15/ex15 \
+	ex15/pointers \
 
 clean:
 	rm -f ex1/ex1 \
@@ -30,3 +32,5 @@ clean:
 		ex13/ex13 \
 		ex13/ex13-2 \
 		ex14/ex14 \
+		ex15/ex15 \
+		ex15/pointers \
