@@ -1,6 +1,8 @@
 FLAGS=-Wall -g
 
-all: ex1/ex1 \
+all: \
+	fun_with_sockets/server \
+	ex1/ex1 \
 	ex3/ex3 \
 	ex4/ex4 \
 	ex5/ex5 \
@@ -22,7 +24,9 @@ all: ex1/ex1 \
 	ctags -R
 
 clean:
-	rm -f ex1/ex1 \
+	rm -f \
+		fun_with_sockets/server \
+		ex1/ex1 \
 		ex3/ex3 \
 		ex4/ex4 \
 		ex5/ex5 \
