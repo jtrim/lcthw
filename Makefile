@@ -20,7 +20,8 @@ all: \
 	ex15/pointers \
 	ex16/ex16 \
 	ex16/ex16-2 \
-	ex17/ex17
+	ex17/ex17 \
+	ex18/ex18
 	ctags -R
 
 clean:
@@ -45,6 +46,7 @@ clean:
 		ex16/ex16 \
 		ex16/ex16-2 \
 		ex17/ex17 \
+		ex18/ex18
 
 server: fun_with_sockets/server
 
