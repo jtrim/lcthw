@@ -1,7 +1,5 @@
 FLAGS=-Wall -g
 
-server: fun_with_sockets/server
-
 all: \
 	fun_with_sockets/server \
 	ex1/ex1 \
@@ -47,3 +45,6 @@ clean:
 		ex16/ex16 \
 		ex16/ex16-2 \
 		ex17/ex17 \
+
+server: fun_with_sockets/server
+
