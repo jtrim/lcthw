@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -100,31 +101,9 @@ int main(int argc, char *argv[]) {
       exit(7);
     }
 
-    int buffer_size = BUFFER_SIZE;
-    nread = -1;
     memset(buffer, 0, BUFFER_SIZE);
 
-    // read one byte at a time from the socket. Ignore nul bytes, since our
-    // client is sending separate strings which each are nul-terminated.
-    // Replace nul bytes with a space
-    for (write_head = buffer;
-         nread != 0 && (write_head - buffer) <= BUFFER_SIZE - 1;
-         write_head++
-         ) {
-      nread = recv(accept_file_descriptor, write_head, 1, 0);
-      if (*(write_head) == '\0') {
-        *(write_head) = ' ';
-      }
-    }
-
-    // Rewind the write head over any spaces or nul bytes to get to the end of
-    // the actual content
-    while (*(write_head) == ' ' || *(write_head) == '\0') {
-      write_head--;
-    }
-
-    // manually terminate the string
-    *(++write_head) = '\0';
+    nread = recv(accept_file_descriptor, buffer, BUFFER_SIZE, 0);
 
     if (nread < 0) {
       perror("Failed request");
@@ -144,8 +123,14 @@ int main(int argc, char *argv[]) {
       exit(4);
     }
 
-    printf("Received %i bytes from %s:%s:\n", (write_head - buffer), host, port);
-    printf("%s\n\n", buffer);
+    printf("Received %ld bytes from %s:%s:\n", (write_head - buffer), host, port);
+    printf("%s%%%%%%", buffer);
+
+    char *response = "<p>Standard response</p>";
+    write(accept_file_descriptor, response, sizeof(char) * strlen(response));
+
+    shutdown(accept_file_descriptor, SHUT_RDWR);
+    close(accept_file_descriptor);
   }
 
   return 0;
