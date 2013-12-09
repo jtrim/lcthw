@@ -24,7 +24,7 @@ void print_letters(char arg[]) {
 }
 
 int can_print_it(char ch) {
-  isalpha(ch) || isblank(ch);
+  return isalpha(ch) || isblank(ch);
 }
 
 int main(int argc, char *argv[]) {

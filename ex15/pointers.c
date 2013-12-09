@@ -7,7 +7,7 @@ int main(int argc, char *argv[]) {
 
   printf("foo is '%s'\n", foo);
   printf("Value at foo: %c\n", *foo);
-  printf("Address is %u\n", &(*foo));
+  printf("Address is %u\n", (int)&(*foo));
 
   printf("\n\n");
 
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 
   printf("other_foo is '%s'\n", other_foo);
   printf("Value at other_foo: %c\n", *other_foo);
-  printf("Address of other_foo is %u\n", &(*other_foo));
+  printf("Address of other_foo is %u\n", (int)&(*other_foo));
 
   printf("\n\nNow with a pointer to an integer.\n");
 
@@ -30,11 +30,11 @@ int main(int argc, char *argv[]) {
   int *fiz = &fiz_source;
 
   printf("fiz is %i\n", *fiz);
-  printf("Address is %u\n", &(*fiz));
+  printf("Address is %u\n", (int)&(*fiz));
 
   int *other_fiz = fiz;
 
-  printf("Address of other_fiz is %u\n", &(*other_fiz));
+  printf("Address of other_fiz is %u\n", (int)&(*other_fiz));
 
   return 0;
 }

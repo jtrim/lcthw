@@ -20,11 +20,5 @@ int main(int argc, char *argv[]) {
     i++;
   }
 
-  printf("\nargv[1] memory position: %u\n", &argv[1]);
-
-  states[0] = argv[1];
-
-  printf("\nstates[0] memory position after states[0] = argv[1]: %u\n", &states[0]);
-
   return 0;
 }
